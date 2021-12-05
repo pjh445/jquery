@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>fadeTo() Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	var $li = $("#fruits li");
+	$("#fruits button").click(function(){
+		$li.eq(0).fadeTo("fast",0.6);
+		$li.eq(1).fadeTo("slow",0.3);
+		$li.eq(2).fadeTo(1300,0.1);
+	});
+});
+</script>
+<style>
+html,body {box-sizing:border-box;}
+#layout {width:650pt; margin:auto; }
+#fruits button {display:block; padding:2pt 5pt; margin-bottom:10pt; border-radius:3pt;}
+#fruits ul {list-style:none; padding-left:0;}
+#fruits li {width:100px; padding:5pt 10pt; margin:10pt; border-radius:10px; float:left; text-align:center;}
+#fruits li:nth-child(1) {background:red;}
+#fruits li:nth-child(2) {background:green;}
+#fruits li:nth-child(3) {background:blue;}
+</style>
+</head>
+<body>
+<div id="layout">
+	<h1>fadeTo()메소드</h1>
+	<section id="fruits">
+		<h2>패이드투 메소드</h2>
+		<button type="button">좋아하는 과일 3가지</button>
+		<ul>
+			<li>딸기</li>
+			<li>파인애플</li>
+			<li>키위</li>
+		</ul>
+	</section>
+</div>
+</body>
+</html>
