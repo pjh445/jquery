@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>fadeIn() Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#fruits button").click(function(){
+		$("#fruits img").fadeIn(1200);
+	});
+});
+</script>
+<style>
+html,body {box-sizing:border-box;}
+#layout {width:650pt; margin:auto; }
+#fruits button {display:block; padding:2pt 5pt; margin-bottom:10pt; border-radius:3pt;}
+#fruits img {width:200px; border-radius:5pt; box-shadow: 0pt 0pt 20pt 5pt orange; margin:10pt; display:none;}
+</style>
+</head>
+<body>
+	<div id="layout">
+		<h1>fadeIn()메소드</h1>
+		<section id="fruits">
+			<h2>패이드 메소드</h2>
+			<button type="button">과일 이미지 부드럽게 보이기</button>
+			<img src="images/fruits1.jpg" alt="과일1">
+			<img src="images/fruits2.jpg" alt="과일2">
+			<img src="images/fruits3.jpg" alt="과일3">
+		</section>
+	</div>
+</body>
+</html>
