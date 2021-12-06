@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>애니메이션 기능</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button:first-of-type").click(function(){
+		$("div").animate({width:"+=100px"});
+		$("div").animate({height:"+=100px"});
+		$("div").animate({top:"+=100px"});
+		$("div").animate({left:"+=100px"});
+	});
+	$("button:last-of-type").click(function(){
+		$("div").animate({width:"-=100px"});
+		$("div").animate({height:"-=100px"});
+		$("div").animate({top:"-=100px"});
+		$("div").animate({left:"-=100px"});
+	});
+});
+</script>
+<style>
+button{font-size:15pt;background:linear-gradient(-20deg,white,#bbb); border:1px solid #999;padding:5px 10px; margin:50px 0;}
+div {background:gold; width:50px;height:50px; position:absolute;}
+</style>
+</head>
+<body>
+	<button>점점 커지는 애니메이션</button>
+	<div></div>
+	<button>점점 작아지는 애니메이션</button>
+</body>
+</html>
