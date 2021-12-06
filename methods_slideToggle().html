@@ -6,30 +6,32 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 $(document).ready(function(){
-var $rank = $("#ranking");
-$rank.children("button").click(function(){
-$(this).next().slideToggle(1300,"swing",function(){
-alert("슬라이드토글되었습니다.");
-});
-});
+	const $rank = $("#ranking");
+	$rank.children("button").click(function(){
+		$(this).next().slideToggle(1300,"swing",function(){
+			alert("슬라이드토글되었습니다.");
+		});
+	});
 });
 </script>
 <style>
 html,body {box-sizing:border-box;}
 #layout {width:650pt; margin:auto; }
 #ranking button {padding:3pt 5pt; margin-bottom:10pt; background:none; border:1px solid #999; border-radius:3pt;}
+#ranking div {background:skyblue; padding:20px; text-align:center;}
+#ranking img {max-width:600px;}
 </style>
 </head>
 <body>
 <div id="layout">
-<h1>제이쿼리의 메소드</h1>
-<section id="ranking">
-<h2>slideDown() 메소드</h2>
-<button type="button">급상승 검색어</button>
-<div>
-<img src="images/ranking.jpg" alt="급상승검색어">
-</div>
-</section>
+	<h1>제이쿼리의 메소드</h1>
+	<section id="ranking">
+		<h2>slideDown() 메소드</h2>
+		<button type="button">급상승 검색어</button>
+		<div>
+			<img src="search.jpg" alt="급상승검색어">
+		</div>
+	</section>
 </div>
 </body>
 </html>
