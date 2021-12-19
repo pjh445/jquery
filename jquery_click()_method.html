@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>제이쿼리</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("main img").click(function(){
+    	$(this).slideUp();
+    });
+});
+</script>
+<style>
+main {max-width:600px; margin:50px auto;}
+main img {display:block; width:70%; margin:auto;}
+</style>
+</head>
+<body>
+
+	<main>	
+    	<img src="images/beach.jpg" alt="바닷가 여행">
+    </main>
+
+</body>
+</html>
