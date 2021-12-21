@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,21 +7,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("main img").click(function(){
+    $("main button").click(function(){
     	$(this).slideUp();
     });
 });
 </script>
 <style>
 main {max-width:600px; margin:50px auto;}
-main img {display:block; width:70%; margin:auto;}
+main button {display:block; width:70%; margin:auto;}
+main button img {width:100%;}
 </style>
 </head>
 <body>
 
 	<main>	
-    	<img src="beach.jpg" alt="바닷가 여행">
-    </main>
+    		<button type="button"><img src="beach.jpg" alt="바닷가 여행"></button>
+	</main>
 
 </body>
 </html>
