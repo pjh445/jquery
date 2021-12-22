@@ -9,8 +9,9 @@
 		$("input").focus(function(){
 			$(this).addClass("in");
 		});
-			$("input").blur(function(){
-		$(this).removeClass("in");
+		$("input").blur(function(){
+			$(this).removeClass("in");
+			$(this).css({"border":"2px dashed red", "background":"pink"});
 		});
 	});
 </script>
