@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>jQuery Event Methods</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){  
+		let x =$(document).scrollTop();
+		$(document).scroll(function(){ 
+			let y= $(document).scrollTop();    
+			let z = y-x;   
+			if(z>0){    	
+				$("div").stop().animate({opacity:1});
+			}
+			if(z<=0){    
+				$("div").stop().animate({opacity:0});
+			}
+			 x=y;    
+		});
+	});
+</script>
+<style>
+	body {margin:0;}
+	::-webkit-scrollbar {width: 1px;}
+	section {height:300px; background:lightgray; text-align:center; padding:20px;}
+	div {height:1000px; background:pink; opacity:0;}
+</style>
+</head>
+<body>
+	<section>
+		<h2>마우스 휠(스크롤)을 내렸다가 올려보세요.</h2>
+	</section>
+	<div></div>
+</body>
+</html>
