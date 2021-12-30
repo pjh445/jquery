@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>제이쿼리 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("img").click(function(){
+		if($(this).hasClass("snow")==true){
+			$(this).attr({"src":"snow.jpg","alt":"겨울 눈"});
+		}
+	});	
+ });
+</script>
+<style>
+section{max-width:600px; margin:auto; border:1px dashed gray; padding:10px;}
+img {width:100%;}
+</style>
+</head>
+<body>
+	<section>
+		<h2>snow라는 클래스명이 있는 이미지를 클릭하면 그 이미지는 겨울 눈 이미지로 변합니다.</h2>
+		<img src="rose.jpg" alt="장미꽃">
+		<img src="rose.jpg" alt="장미꽃" class="snow">
+	</section>
+</body>
+</html>
