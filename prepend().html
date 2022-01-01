@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>jQuery methods</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(function(){
+	  $("#btn1").click(function(){
+		$("p").prepend("<b>Prepended text</b>. ");
+	  });
+	  $("#btn2").click(function(){
+		$("ol").prepend("<li>Prepended item</li>");
+	  });
+	});
+	</script>
+</head>
+<body>
+	<p>첫번째 텍스트 문단입니다.</p>
+	<p>두번째 텍스트 문단입니다.</p>
+	<ol>
+		<li>아이템 1</li>
+		<li>아이템 2</li>
+		<li>아이템 3</li>
+	</ol>
+	<button id="btn1">텍스트 추가하기</button>
+	<button id="btn2">목록 추가하기</button>
+</body>
+</html>
