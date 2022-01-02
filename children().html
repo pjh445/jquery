@@ -7,7 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
 	<script>
 	$(document).ready(function(){
-		$("#jewelry div").children("img:nth-child(2)").addClass("round");
+		$("#jewelry div").children(":nth-child(2)").addClass("round");
 	});
 	</script>	
 	<style>
@@ -22,7 +22,7 @@
 <body>
 
 	<section id="jewelry">
-		<h1>div요소의 자식요소(children)중에서 두번째 이미지에 대해 둥근 모서리와 외부광선 효과를 적용합니다.<h1>
+		<h1>div요소의 자식요소(children)중에서 두번째 자식요소에 둥근 모서리와 외부광선 효과를 적용합니다.<h1>
 		<div>			
 			<img src="jewelry-1.jpg" alt="쥬얼리">
 			<img src="jewelry-2.jpg" alt="쥬얼리">
