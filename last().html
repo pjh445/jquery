@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>제이쿼리 DOM요소 탐색 메소드</title>
+	<meta name="viewport" content="width=device-width">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $("#layout").click(function(){
+			$(this).find("li").last().css({"background":"aqua","padding":"10px 15px","font-weight":"bold"})
+	  });
+	});
+	</script>
+	<style>
+	#layout {max-width:500px; margin:auto; margin-top:20px; box-shadow:0 0 10px blue; padding:20px; border-radius:10px;}
+	#layout h1{font:1.3rem "나눔스퀘어","나눔고딕"; padding-bottom:20px;}
+	#layout ul{list-style:none; }
+	</style>
+</head>
+<body>
+	<section id="layout">
+		<h1>이 영역을 클릭하면 마지막 항목에 배경색 등 디자인이 표현됩니다.</h1>
+		<ul>
+			<li>눈이 부시게 푸르른 날은</li>
+			<li>그리운 사람을 그리워 하자<br><br></li>
+			<li>저기 저기 저 가을 꽃 자리</li>
+			<li>초록이 지쳐 단풍드는데<br><br></li>
+			<li>눈이 내리면 어이하리야</li>
+			<li>봄이 또 오면 어이하리야<br><br></li>
+			<li>내가 죽고서 네가 산다면</li>
+			<li>네가 죽고서 내가 산다면<br><br></li>
+			<li>눈이 부시게 푸르른 날은</li>
+			<li>그리운 사람을 그리워 하자<br><br></li>
+			<li><i>시인 서정주... 눈이 부시게 푸르른 날은</i></li>
+		</ul>
+	</section>
+</body>
+</html>
+
+
