@@ -7,10 +7,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
 <script>
 $(document).ready(function(){ 
-  $("#txt").on("keyup", function() { 
-    let zz = $(this).val().toLowerCase(); 
-    $("body :not('#txt')").filter(function() { 
-      $(this).toggle( $(this).text().toLowerCase().indexOf(zz) > -1); 
+  $("#txt").on("keyup", function() {
+    //입력하는 텍스트(value값)를 소문자로 변환하여 변수txt에 저장함.
+    let txt = $(this).val().toLowerCase(); 
+	//과일 목록 영문 텍스트
+    $("#fruits section p").filter(function() { 
+      $(this).toggle( $(this).text().toLowerCase().indexOf(txt) > -1); 
     }); 
   }); 
 }); 
@@ -25,11 +27,11 @@ $(document).ready(function(){
 		<br> 
 		<section> 
 		<h1>과일 목록</h1> 
-			<p>apple</p> 
-			<p>Strawberry</p> 
+			<p>Apple</p> 
+			<p>strawberry</p> 
 			<p>grape</p> 
 			<p>Orange</p> 
-			<p>pineapple</p> 
+			<p>Pineapple</p> 
 		</section> 
 	</div>
 </body> 
