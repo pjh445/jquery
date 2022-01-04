@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>제이쿼리 DOM요소 탐색 메소드</title>
+	<meta name="viewport" content="width=device-width">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+			$(".txt2").parent().addClass("border_1  bg_1");
+	 });
+	</script>
+	<style>
+	* {margin:0; box-sizing:border-box;}
+	html,body {font:15pt/180% "NanumSquare","NanumGothic","dotum";}
+	#flowers{max-width:800px; margin:auto; margin-top:10px; border:1px dashed gray; padding:10px; text-align:center; display:flex; flex-direction:column;}
+	#flowers section{width:85%; border:2px solid pink; border-radius:20px; font-weight:bold; overflow:hidden; margin:auto; margin-bottom:20px;  display:flex; align-items:center;}
+	#flowers section img {width:45%; display:block; }
+	#flowers section h3  {width:55%; font-size:1.2rem; color:#d10024;}
+	#flowers p {padding:10px; margin-top:10px;}
+	.bg_1 {background:#faffe1;}
+	.bg_2 {background:#ffe1e6;}
+	#flowers section.border_1 {border:12px ridge #9db44d;}
+	#flowers section.border_2 {border:2px dashed tomato; }
+	</style>
+</head>
+<body>
+	<div id="flowers">
+			<section>
+				<img src="spring1.jpg" alt="봄풍경">
+				<h3>봄풍경 1</h3>
+			</section>
+			<section>
+				<img src="spring2.jpg" alt="봄풍경">
+				<h3 class="txt2">봄풍경 2</h3>
+			</section>
+			<section>
+				<img src="spring3.jpg" alt="봄풍경">
+				<h3>봄풍경 3</h3>
+			</section>
+	</div>
+</body>
+</html>
