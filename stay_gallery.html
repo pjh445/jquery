@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>이미지 갤러리</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){//시작부분
+	//이미지 갤러리
+	$("#gallery  button").click(function(){		
+	
+		//클릭한 곳 이미지 주소
+		const x1 = $(this).children().attr("src"); //예_ "images/02.jpg"
+		
+		if( $(this).attr("class") != "active" ){
+		
+			//글자로 된 썸네일 이미지 주소 x1 변수에 대입
+			const x2 = $(".active img").attr("src"); //예_ "images/01_active.jpg"
+			
+			//x2 에서 "_active" 글자 삭제하여 x3변수에 대입
+			const x3 = x2.replace( "_active.jpg" , ".jpg" ); //예_ "images/01.jpg"
+			
+			//x3에 있는 글자를 현재 .active 속 이미지에 넣는다.
+			$(".active img").attr(  "src" , x3  );//src 값이 바뀐다.
+			
+			//기존 클래스 삭제
+			$("#gallery  button").removeClass( "active" );
+			//클릭한 곳에 클래스 추가
+			$(this).addClass( "active" );
+			
+			//x1 글자에서 '_active' 글자 추가하여 y에 대입
+			const y = x1.replace( ".jpg" , "_active.jpg" );//예_ "images/02_active.jpg"
+			
+			//클릭한 곳 이미지 변경
+			$(this).children().attr( "src" ,  y  );
+			
+			//큰 이미지 바꾸기
+			const z = x1.replace( ".jpg"  ,  "_big.jpg"  );//예_ "images/02_big.jpg"
+			$("#big img").attr( "src" , z  );
+		}
+	});
+});//끝부분
+</script>
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+
+#gallery {width:760px; margin:auto; border:1px solid red; margin-top:50px;}
+#gallery h2 {display:none;}
+#gallery >div {display:flex; }
+#gallery  button {border:none; background:transparent;}
+#gallery  img    {max-width:100%; display:block;}
+
+#small  {display:flex; flex-direction:column; justify-content:space-between;}
+</style>
+</head>
+<body>
+
+	<section id="gallery">
+		<h2>이미지 갤러리</h2>
+		<div>
+			<div id="big">
+				<a href="#"><img src="images/01_big.jpg" alt="울랄라 온수풀펜션"></a>
+			</div>
+			<div id="small">
+				<button type="button" class="active"><img src="images/01_active.jpg" alt="울랄라 온수풀펜션"></button>
+				<button type="button"><img src="images/02.jpg" alt="하이락 글램핑"></button>
+				<button type="button"><img src="images/03.jpg" alt="소노벨 비발디파크"></button>
+				<button type="button"><img src="images/04.jpg" alt="풍차마을 아이리스펜션"></button>
+				<button type="button"><img src="images/05.jpg" alt="바오하우스"></button>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
+
+
+
