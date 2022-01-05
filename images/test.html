@@ -1,1 +1,172 @@
-1111
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>박스형 목록 호버 효과</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){////전체시작
+
+	//박스형목록에 마우스를 대면 나머지 박스는 어두워진다.
+	$("#boxList> section").hover(
+		function(){
+			$(this).siblings().addClass("black");
+		},
+		function(){
+			$(this).siblings().removeClass("black");
+		}
+	);
+	
+	
+}); ///////////////////전체끝
+</script>
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+html,body {font:10pt "나눔고딕"; color:#444;}
+img {display:block; max-width:100%;}
+
+#boxList {width:1150px; margin:auto; margin-top:50px; border:1px solid red; display:flex; justify-content:space-around; padding:20px 0; background:#eee;}
+#boxList> h2 {display:none;}
+
+/*둥근사각형 4개*/
+#boxList> section {border:1px solid #aaa; border-radius:10px; overflow:hidden; background:white; line-height:140%; padding-bottom:20px; cursor:pointer; transition:0.5s;}
+#boxList> section> div {display:flex; align-items:center; margin:20px 0;}
+
+/*둥근사각형에 마우스를 대면 왼쪽 막대바가 길어진다*/
+#boxList> section:hover .bar {transform:scaleX(3) scaleY(40);}
+.black {filter:brightness(50%);}
+
+/* 레저&스포츠 머릿글 */
+#boxList h3 {flex:1; font-size:1.4rem;}
+
+/* 더보기 */
+#boxList> section a {border:1px solid #999; border-radius:10px; padding:2px 10px 0 10px; color:#666; margin-right:5px; text-decoration:none;}
+
+/* 스릴과 모험... 머릿글 */
+#boxList h4 {font-size:1.17rem; letter-spacing:-0.5pt; padding-bottom:10px; padding-left:15px; color:black; }
+#boxList p {padding-left:15px;}
+
+/* 박스 왼쪽 막대바 */
+.bar {margin-right:15px; transition:0.5s;}
+.bar2 {filter:hue-rotate(140deg) saturate(150%);}
+.bar3 {filter:hue-rotate(210deg) saturate(150%);}
+.bar4 {filter:hue-rotate(70deg) saturate(150%);}
+</style>
+</head>
+<body>
+	<section id="boxList">
+		<h2>박스형 콘텐츠 목록</h2>
+		<section v-for="X in Y1">
+			<img :src="X.S1" :alt="X.A1">
+			<div>
+				<img :src="X.S2" :alt="X.A2" :class="X.C">
+				<h3>{{X.H3}}</h3>
+				<a :href="X.HR">{{X.A}}</a>
+			</div>
+			<h4>{{X.H4}}</h4>
+			<p>{{X.P1}}<br>{{X.P2}}</p>
+		</section>
+		<section v-for="X in Y2">
+			<img :src="X.S1" :alt="X.A1">
+			<div>
+				<img :src="X.S2" :alt="X.A2" :class="X.C">
+				<h3>{{X.H3}}</h3>
+				<a :href="X.HR">{{X.A}}</a>
+			</div>
+			<h4>{{X.H4}}</h4>
+			<p>{{X.P1}}<br>{{X.P2}}</p>
+		</section>
+		<section v-for="X in Y3">
+			<img :src="X.S1" :alt="X.A1">
+			<div>
+				<img :src="X.S2" :alt="X.A2" :class="X.C">
+				<h3>{{X.H3}}</h3>
+				<a :href="X.HR">{{X.A}}</a>
+			</div>
+			<h4>{{X.H4}}</h4>
+			<p>{{X.P1}}<br>{{X.P2}}</p>
+		</section>
+		<section v-for="X in Y4">
+			<img :src="X.S1" :alt="X.A1">
+			<div>
+				<img :src="X.S2" :alt="X.A2" :class="X.C">
+				<h3>{{X.H3}}</h3>
+				<a :href="X.HR">{{X.A}}</a>
+			</div>
+			<h4>{{X.H4}}</h4>
+			<p>{{X.P1}}<br>{{X.P2}}</p>
+		</section>		
+	</section>
+<!--***** 뷰스크립트 *****-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>﻿
+<script>
+const boxList = new Vue({
+	el: "#boxList",
+	data : {
+		Y1 : [
+				{
+					S1:"images/pic-1.jpg",
+					A1:"울릉도 길",
+					S2:"images/bar.jpg",
+					A2:"막대바",
+					C:"bar bar1",
+					H3:"레저&스포츠",
+					HR:"more.html",
+					A:"더보기 +",
+					H4:"스릴과 모험을 좋아하세요?",
+					P1:"등산/트레킹/자전거트레킹",
+					P2:"바다낚시/스킨스쿠버/생태탐방"
+				}
+		],
+		Y2 : [
+				{
+					S1:"images/pic-2.jpg",
+					A1:"울릉도 먹거리",
+					S2:"images/bar.jpg",
+					A2:"막대바",
+					C:"bar bar2",
+					H3:"일반먹거리",
+					HR:"more.html",
+					A:"더보기 +",
+					H4:"울릉도의 풍부한 먹거리 맛보셨나요?",
+					P1:"따개비밥/홍합밥",
+					P2:"오징어내장탕/산채비빔밥"
+				}
+		],
+		Y3 : [
+				{
+					S1:"images/pic-3.jpg",
+					A1:"울릉도 숙박",
+					S2:"images/bar.jpg",
+					A2:"막대바",
+					C:"bar bar3",
+					H3:"숙박시설",
+					HR:"more.html",
+					A:"더보기 +",
+					H4:"울릉도의 숙박시설을 소개합니다",
+					P1:"관광호텔/호스텔",
+					P2:"관광펜션/국민여가캠핑장"
+				}
+		],
+		Y4 : [
+				{
+					S1:"images/pic-4.jpg",
+					A1:"울릉도 축제",
+					S2:"images/bar.jpg",
+					A2:"막대바",
+					C:"bar bar4",
+					H3:"문화축제",
+					HR:"more.html",
+					A:"더보기 +",
+					H4:"울릉도 문화와 다양한 축제 안내!",
+					P1:"오징어축제/민속그네뛰기",
+					P2:"우산문화제/울릉도해변가요제"
+				}
+		]
+	}
+});
+</script>
+</body>
+</html>
