@@ -7,7 +7,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script>
 	$(document).ready(function(){		
-			$("#flowers section").nextAll().addClass("border_1 bg_2");
+			$("#flowers section:first-child").nextAll().addClass("border_1 bg_2");
 	 });
 	</script>
 	<style>
@@ -27,7 +27,7 @@
 </head>
 <body>
 	<section id="flowers">
-		<h2>[겨울꽃 1] 섹션 다음에 오는 모든 형제섹션 요소에 2개의 class 스타일 디자인이 적용되었습니다.</h2>
+		<h2>[겨울꽃 1] 섹션 다음에 오는 모든 형제 요소에 class 스타일 디자인 2가지가 적용됩니다.</h2>
 		<div>
 			<section>
 				<img src="snow_flower-1.jpg" alt="겨울꽃">
