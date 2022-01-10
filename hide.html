@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 hide() 메소드</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#firstSection>img").click(function(){
+		$(this).hide();
+	});
+});
+</script>
+<style>
+html,body {box-sizing:border-box;}
+#layout {width:350pt; margin:auto;}
+#firstSection>img {width:100%; border-radius:10pt;}
+</style>
+</head>
+<body>
+	<div id="layout">
+		<h1>hide()메소드</h1>
+		<section id="firstSection">
+			<h2>이미지를 클릭하면 이미지가 숨겨집니다.</h2>
+			<img src="flower.jpg" alt="벚꽃 이미지">
+			<ul>
+				<li>hide()메소드는 선택한 요소를 숨깁니다.</li>
+				<li>이 기능은 CSS속성에서 display:none;과 비슷합니다.</li>
+				<li>숨겨진 요소는 보이지 않습니다.</li>
+				<li>숨겨진 요소를 표시하려면 show()메소드를 사용할 수 있습니다.</li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>
