@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>slideDown() Method</title>
+<title>jQuery's Method</title>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 $(document).ready(function(){
 	const $rank = $("#ranking");
-	$rank.children("button").click(function(){
-		$(this).next().slideDown();
+	$rank.children("button").mouseenter(function(){
+		$(this).next().slideUp(1000);
 	});
 });
 </script>
@@ -17,8 +17,7 @@ $(document).ready(function(){
 html,body {box-sizing:border-box;}
 #layout {width:650pt; margin:auto; }
 #ranking button {padding:3pt 5pt; margin-bottom:10pt; background:none; border:1px solid #999; border-radius:3pt;}
-#ranking div {display:none;}
-#ranking img {max-width:500px; }
+#ranking img {max-width:600px;}
 </style>
 </head>
 <body>
