@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 one() 이벤트 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+     $('#add_1').one('click', function(){
+          $('ol').append("<li>노란색</li>");
+      });
+	  $('#add_2').click(function(){
+          $('ol').append("<li>오렌지색</li>");
+      });
+ });
+</script>
+</head>
+<body>
+	<button id="add_1">항목 한번만 추가하기</button>
+	<button id="add_2">항목 계속 추가하기</button>
+	<br><br>
+	<ol>
+		<li>빨간색</li>
+		<li>보라색</li>
+		<li>파랑색</li>
+		<li>초록색</li>
+		<li>하늘색</li>
+	</ol>
+</body>
+</html>
