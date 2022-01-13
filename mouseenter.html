@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery Event Methods</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){ 
+	$("#ranking>div").mouseenter(function(){
+		$(this).animate({left:"+=100px"});
+	});
+});
+</script>
+<style>
+	html,body {box-sizing:border-box;}
+	#layout {width:600pt; margin:auto; }
+	#ranking div {position:relative; border:5px solid #ddd;}
+	#ranking div img {display:block; max-width:100%; margin:auto;}
+</style>
+</head>
+<body>
+	<div id="layout">
+		<h1>제이쿼리 이벤트 메소드</h1>
+		<section id="ranking">
+			<h2>마우스 포인터가 영역안에 들어오면 이벤트가 발생합니다.</h2>
+			<div>
+				<img src="images/ranking.jpg" alt="급상승검색어">
+			</div>
+		</section>
+	</div>
+</body>
+</html>
