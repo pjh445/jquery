@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 after() 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(".fruits li").click(function(){
+		$(this).after("&#10168;");
+	});	
+ });
+</script>
+<style>
+.fruits{max-width:600px; margin:auto; border:1px dashed gray; padding:10px;}
+.fruits ul {list-style:none;}
+.fruits li{border:1px dotted lightgray; padding:5px;}
+.fruits:last-child  li::after {content:" \273F";}
+</style>
+</head>
+<body>
+	<section class="fruits">
+		<h2>after()메소드</h2>
+		<ul>
+			<li>딸기</li>
+			<li>사과</li>
+			<li>키위</li>
+			<li>바나나</li>
+			<li>포도</li>
+		</ul>
+	</section>
+	<section class="fruits">
+		<h2>::after 가상 선택자</h2>
+		<ul>
+			<li>딸기</li>
+			<li>사과</li>
+			<li>키위</li>
+			<li>바나나</li>
+			<li>포도</li>
+		</ul>
+	</section>
+</body>
+</html>
