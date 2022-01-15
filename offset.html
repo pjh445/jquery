@@ -9,7 +9,7 @@
 	$(document).ready(function(){
 		$("button").click(function(){
 			$("div>div").offset(function(x,y){
-				alert( "노란영역의 오프셋 left 위치는 " + y.left + "픽셀, 오프셋 top 위치는 " + y.top +"픽셀입니다." );
+				alert( "노란영역의 오프셋 left 위치는 " + Math.round(y.left) + "픽셀, 오프셋 top 위치는 " + y.top +"픽셀입니다." );
 			});
 		});
 	});
