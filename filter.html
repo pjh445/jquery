@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 filter() 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script>
+$(document).ready(function(){ 
+  $("#txt").on("keyup", function() {
+    //입력하는 텍스트(value값)를 소문자로 변환하여 변수txt에 저장함.
+    let txt = $(this).val().toLowerCase(); 
+    //과일 목록 영문 텍스트도 소문자로 변환하여 비교한 후 필터링 된 <p>요소만 보이게 됨.
+    $("#fruits section p").filter(function() { 
+      $(this).toggle( $(this).text().toLowerCase().indexOf(txt) > -1); 
+    }); 
+  }); 
+}); 
+</script> 
+<style>
+#fruits {max-width:500px; margin:auto; border:5px solid #eee; padding:10px 20px;}
+</style>
+</head> 
+<body>
+	<div id="fruits">
+		<input id="txt" type="text" placeholder="과일이름을 기재하세요."> 
+		<br> 
+		<section> 
+		<h1>과일 목록</h1> 
+			<p>Apple</p> 
+			<p>strawberry</p> 
+			<p>grape</p> 
+			<p>Orange</p> 
+			<p>Pineapple</p> 
+		</section> 
+	</div>
+</body> 
+</html>
