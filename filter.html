@@ -7,7 +7,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
 <script>
 $(document).ready(function(){ 
-  $("#txt").on("keyup", function() {
+  $("#txt").keyup(function() {
     //입력하는 텍스트(value값)를 소문자로 변환하여 변수txt에 저장함.
     let txt = $(this).val().toLowerCase(); 
     //과일 목록 영문 텍스트도 소문자로 변환하여 비교한 후 필터링 된 <p>요소만 보이게 됨.
