@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 has() 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#spring li").has("i").css({"border":"2px dashed yellowgreen","background":"rgba(233,255,129,0.5)"})
+});
+</script>
+<style>
+	html,body {box-sizing:border-box; font-size:18px;}
+	#layout {width:600pt; height:600px; margin:20px auto; box-shadow:1px 1px 10px aqua; padding:30px; background:url("images/spring4.jpg") no-repeat center top/ cover;}
+	#layout h1 {font:bold 1.2rem "나눔스퀘어","나눔고딕"; padding-bottom:20px; color:gold; text-align:center;}
+	#spring img {width:50%; border-radius:10pt;}
+	#spring ul {list-style:none; line-height:170%; padding-left:0;}
+	#spring li {padding-left:30px; font:bold 1.2rem/180% "나눔스퀘어","나눔고딕"; text-shadow:1.2pt 1px 0px white;}
+</style>
+</head>
+<body>
+	<div id="layout">
+		<h1>&#10094;i&#10095; 요소가 포함 된  "#spring li" 요소에 테두리 및 배경색 디자인이 표현됩니다.</h1>
+		<section id="spring">
+			<h2>봄 ..... 서정주</h2>			
+			<ul>
+				<li>복사꽃 피고, 복사꽃 <i>지고</i>,</li> 
+				<li>뱀이 눈뜨고, 초록제비 무처오는</li>
+				<li>하늬바람 우에 <span><b>혼령있는 <i>하눌</i>이어.</b></span></li> 
+				<li>피가 <b><i>잘</i></b> 도라…</li> 
+				<li>아무 <strong><i>병도</i></strong> 없으면 가시내야.</li>
+				<li>슬픈일좀 슬픈일좀, 있어야겠다.</li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>
