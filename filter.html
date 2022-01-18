@@ -7,13 +7,16 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
 <script>
 $(document).ready(function(){ 
-  $("#txt").keyup(function() {
-    //입력하는 텍스트(value값)를 소문자로 변환하여 변수txt에 저장함.
-    let txt = $(this).val().toLowerCase(); 
-    //과일 목록 영문 텍스트도 소문자로 변환하여 비교한 후 필터링 된 <p>요소만 보이게 됨.
-    $("#fruits section p").filter(function() { 
-      $(this).toggle( $(this).text().toLowerCase().indexOf(txt) > -1); 
-    }); 
+  //텍스트박스에 스펠링 하나를 입력할 때마다 필터 작동함.
+  $("#txt").on("keyup", function() { 
+      //한 글자씩 입력할 때마다 소문자로 변환하여 변수txt에 저장됨.
+      let txt = $(this).val().toLowerCase(); 
+      //과일 목록 글자를 필터링함
+      $("#fruits section p").filter(function() { 
+            //toggle()은 필터 결과에 따라 show/hide를 전환함.    
+			//index() > -1은 마지막 문자열 1개를 의미함.	
+           $(this).toggle( $(this).text().indexOf(txt) > -1 );
+      }); 
   }); 
 }); 
 </script> 
@@ -27,11 +30,11 @@ $(document).ready(function(){
 		<br> 
 		<section> 
 		<h1>과일 목록</h1> 
-			<p>Apple</p> 
-			<p>strawberry</p> 
-			<p>grape</p> 
-			<p>Orange</p> 
-			<p>Pineapple</p> 
+			<p>사과</p> 
+			<p>딸기</p> 
+			<p>포도</p> 
+			<p>오렌지</p> 
+			<p>파인애플</p> 
 		</section> 
 	</div>
 </body> 
