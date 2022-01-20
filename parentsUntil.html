@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>제이쿼리 parents() 메소드</title>
+<title>제이쿼리 parentsUntil() 메소드</title>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>
 	$(document).ready(function(){		
-			$(".txt2").parents().css("border","5px solid blue");
+			$('[alt="봄풍경1"]').parentsUntil("body").css("border","5px solid green");
 	 });
 	</script>
 	<style>
@@ -18,24 +18,20 @@
 	#flowers section img {width:45%; display:block; }
 	#flowers section h3  {width:55%; font-size:1.2rem; color:#d10024;}
 	#flowers p {padding:10px; margin-top:10px;}
-	.bg_1 {background:#faffe1;}
-	.bg_2 {background:#ffe1e6;}
-	#flowers section.border_1 {border:12px ridge #9db44d;}
-	#flowers section.border_2 {border:2px dashed tomato; }
 	</style>
 </head>
 <body>
 	<div id="flowers">
 			<section>
-				<img src="images/spring1.jpg" alt="봄풍경">
+				<img src="images/spring4.jpg" alt="봄풍경1">
 				<h3>봄풍경 1</h3>
 			</section>
 			<section>
-				<img src="images/spring2.jpg" alt="봄풍경">
-				<h3 class="txt2">봄풍경 2</h3>
+				<img src="images/spring2.jpg" alt="봄풍경2">
+				<h3>봄풍경 2</h3>
 			</section>
 			<section>
-				<img src="images/spring3.jpg" alt="봄풍경">
+				<img src="images/spring0.jpg" alt="봄풍경3">
 				<h3>봄풍경 3</h3>
 			</section>
 	</div>
