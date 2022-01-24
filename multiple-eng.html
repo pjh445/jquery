@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery  Multiple Selectors</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("h2, h3.gold, #para_2.gold").css({"font-style": "italic", 
+  "border": "2px dashed red" , "background" : "gold", "padding" : "3.3pt"});
+});
+</script>
+</head>
+<body>
+
+     <section>  	     
+               <h2 class="gold">Spread your wings of hope!</h2>
+     </section>
+     <p id="para_1">Fly around the world freely!</p>
+     <article>  	
+               <h3 class="gold">Fly around the world freely!</h3>
+     </article>
+     <p class="gold">Fly around the world freely!</p>
+     <footer>  	           
+               <p id="para_2" class="gold">Spread your wings of hope!</p>
+     </footer>
+</body>
+</html>

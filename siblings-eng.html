@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery  Descendant Selector</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("section+p").css({"font-style": "italic" ,"border" : "2px dashed blue" , "background" : "aqua" , "padding" : "3.3pt"});
+});
+</script>
+</head>
+<body>
+
+  <section>
+  	<h2>Spread your wings of hope!</h2>
+  </section>
+  <p>Fly around the world freely!</p>
+  <p>Fly around the world freely!</p>
+
+</body>
+</html>
