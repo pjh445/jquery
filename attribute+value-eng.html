@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery Attribute Selector</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("[target='_parent']").css({"font-style": "italic" ,"background" : "yellowgreen" ,  "padding" : "3.3pt"});
+});
+</script>
+</head>
+<body>
+
+  <section>
+  	<h2 class="gold">Let's go to conquer jQuery</h2>
+    <a href="http://naver.com" target="_blank">Naver</a>
+  </section>
+  <p id="para_1">Give wings to conquer jQuery</p>
+  <article>
+  	<h3 class="gold">jQuery is a JavaScript library for web documents.</h3>
+    <a href="http://naver.com">Naver</a>
+  </article>
+  <p class="gold">Let's put the wings of jQuery in HTML</p>
+  <footer>
+  	<p id="para_2" class="gold">Spread your wings of hope</p>
+    <a href="http://naver.com" target="_parent">Naver</a>
+  </footer>
+</body>
+</html>
