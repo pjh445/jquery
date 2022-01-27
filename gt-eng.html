@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery Pseudo Selector</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(" a:gt(2)").css({
+			"font-style": "italic", 
+			"background": "aqua", 
+			"padding" : "3.3pt"
+	});
+});
+</script>
+</head>
+<body>
+
+	<section>
+		<h2 class="gold yellow pink9">Let's go to the jQuery conquest</h2>
+		<a href="http://samsung.com" target="_top">Samsung</a>
+		<a href="http://apple.com" target="_blank">Apple</a>
+		<a href="http://adobe.com" target="_blank">Adobe</a>    
+	</section>
+	<p id="para_1">Give me wings to conquer jquery</p>
+	<article>
+		<h3 class="pink gold green">Query is a JavaScript library for web documents</h3>
+		<a href="http://samsung.com" target="_top">Samsung</a>
+		<a href="http://apple.com" target="_blank">Apple</a>
+		<a href="http://adobe.com" target="_blank">Adobe</a>
+	</article>
+	<p class="blue gold deeppink_1">Add jQuery wings to your HTML</p>
+	<footer>
+		<p id="para_2" class="gold">Spread your wings of hope!</p>
+		<a href="http://samsung.com" target="_top">Samsung</a>
+		<a href="http://apple.com" target="_blank">Apple</a>
+		<a href="http://adobe.com" target="_blank">Adobe</a>
+	</footer>
+  
+</body>
+</html>

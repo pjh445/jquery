@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery hide() Method</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#firstSection>img").click(function(){
+		$(this).hide();
+	});
+});
+</script>
+<style>
+html,body {box-sizing:border-box;}
+#layout {width:350pt; margin:auto;}
+#firstSection>img {width:100%; border-radius:10pt;}
+</style>
+</head>
+<body>
+	<div id="layout">
+		<h1>hide()Method</h1>
+		<section id="firstSection">
+			<h2>Click on the flower image to hide it (image).</h2>
+			<img src="images/flower.jpg" alt="cherry blossom">
+			<ul>
+               <li>The hide() method hides the selected element.</li>
+			   <li>This function is similar to display:none; in CSS properties.</li> 
+			   <li>Hidden elements are not visible</li>
+			   <li>You can use the show() method to show hidden elements</li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>
