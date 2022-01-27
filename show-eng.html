@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery show() Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#firstSection>img").click(function(){
+		$(this).next().show();
+	});
+});
+</script>
+<style>
+html,body {box-sizing:border-box;}
+#layout {width:350pt; margin:auto; text-align:justify;}
+#firstSection>img {width:100%; border-radius:10pt;}
+#firstSection>ul {display:none;}
+</style>
+</head>
+<body>
+	<div id="layout">
+		<h1>show() Method</h1>
+		<section id="firstSection">
+			<h2>Click on the image to reveal the hidden list below the image.</h2>
+			<img src="images/snow.jpg" alt="snow">
+			<ul>
+				<li>The show() method shows hidden elements.</li>
+				<li>To make an element invisible, you can use the hide() method.</li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>
