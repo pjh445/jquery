@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery stop() Method</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	const $img = $("#spring img");
+	$("#spring button").first().click(function(){
+		$img.animate({width:"500px"},3000);
+		$img.animate({left:"800px"},3000);
+	});
+	$("#spring button").last().click(function(){
+		$img.stop(true,true);
+	});
+});
+</script>
+<style>
+#spring {width:750px;}
+#spring button {padding:5px 10px; margin-bottom:30px;}
+#spring img {width:0; position:relative;}
+</style>
+</head>
+<body>
+	<section id="spring">
+		<h1>stop() Method parameter</h1>
+		<button type="button">Run Animation</button>
+		<button type="button">Stop Animation</button><br>
+		<img src="images/spring.jpg" alt="spring">
+	</section>
+</body>
+</html>
