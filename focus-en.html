@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery  focus()  Event Method</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("input").focus(function(){
+			$(this).addClass("in");
+		});
+			$("input").blur(function(){
+		$(this).removeClass("in");
+		});
+	});
+</script>
+<style>
+	form {width:400px; margin:auto;}
+	input {padding:5px; border-radius:3px; border:1px solid #999;}
+	.in {background:gold; border:1px dashed red;}
+</style>
+</head>
+<body>
+	<form action="#">
+		<h1>focus() Method</h1>
+		<input type="text" placeholder="name" required>
+		<button>OK</button>
+		<p></p>
+	</form>
+</body>
+</html>
