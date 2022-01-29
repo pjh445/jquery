@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery delay() method</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").delay(500).fadeIn();
+    $("#div3").delay(1000).fadeIn();
+    $("#div4").delay(1500).fadeIn();
+    $("#div5").delay(2000).fadeIn();
+  });
+});
+</script>
+<style>
+#layout {max-width:500px; margin:auto; margin-top:50px;}
+#layout button {display:block; margin:auto;}
+#layout div {width:50px; height:50px; display:none; margin:20px auto;}
+#div1 {background:yellow;}
+#div2 {background:yellowgreen;}
+#div3 {background:skyblue;}
+#div4 {background:tomato;}
+#div5 {background:aqua;}
+</style>
+</head>
+<body>
+	<div id="layout">
+		<button>Execute</button>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+		<div id="div4"></div>
+		<div id="div5"></div>
+	</div>
+</body>
+</html>
