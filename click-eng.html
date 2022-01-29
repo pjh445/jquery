@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery click() Event Method</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("main button").click(function(){
+    	$(this).slideUp();
+    });
+});
+</script>
+<style>
+main {max-width:600px; margin:50px auto;}
+main button {display:block; width:70%; margin:auto;  border:none; background:none;}
+main button img {width:100%;}
+</style>
+</head>
+<body>
+
+	<main>	
+    		<button type="button"><img src="images/beach.jpg" alt="beach trip"></button>
+	</main>
+
+</body>
+</html>
