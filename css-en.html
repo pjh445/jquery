@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery   css() Event Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(".rose img").click(function(){
+		$(this).css({"border-radius":"200px","opacity":0.5});
+	});	
+ });
+</script>
+<style>
+.rose{max-width:600px; margin:auto; border:1px dashed gray; padding:10px;}
+.rose img{width:100%;}
+</style>
+</head>
+<body>
+	<section class="rose">
+		<h2>When you click on the rose, the flower becomes round and translucent.</h2>
+		<img src="images/rose.jpg" alt="rose">
+	</section>
+</body>
+</html>

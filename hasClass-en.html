@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery   hasClass() Event Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("img").click(function(){
+		if($(this).hasClass("snow")==true){
+			$(this).attr({"src":"images/snow.jpg","alt":"snow"});
+		}
+	});	
+ });
+</script>
+<style>
+section{max-width:600px; margin:auto; border:1px dashed gray; padding:10px;}
+img {width:100%;}
+</style>
+</head>
+<body>
+	<section>
+		<h2>If you click on an image with a class name of 'snow' it will change to the snow image and the alt text will also change to 'snow'.</h2>
+		<img src="images/rose.jpg" alt="rose" title="rose">
+		<img src="images/rose.jpg" alt="rose" class="snow" title="snow">
+	</section>
+</body>
+</html>
