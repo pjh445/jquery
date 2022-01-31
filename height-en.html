@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery  height() Event Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("img").click(function(){
+		const h = $(this).height();
+		$("img").height(h);
+	});	
+ });
+</script>
+<style>
+section{max-width:1000px; margin:auto; border:1px dashed gray; padding:10px;}
+div {display:flex; align-items:flex-start;}
+img {width:50%;}
+</style>
+</head>
+<body>
+	<section>
+		<h2>When you click an image, the height of the clicked image is applied to the entire image to change the height of the other image.</h2>
+		<div>
+			<img src="images/rose.jpg" alt="rose">
+			<img src="images/winter.jpg" alt="winter">
+		</div>
+	</section>
+</body>
+</html>
