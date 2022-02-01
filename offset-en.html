@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>jQuery   offset() Event Method</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("div>div").offset(function(x,y){
+				alert( "The offset left position of the yellow area is " + Math.round(y.left) + "pixels, the offset top position is " + y.top +" pixels." );
+			});
+		});
+	});
+	</script>
+	<style>
+		body> div {background:silver; width:700px; height:300px; margin:auto; padding-top:100px; position:relative;}
+		div> div {background:gold; width:400px; height:200px; margin:auto; padding:20px;;}
+		button {display:block; margin:20px auto;}
+	</style>
+</head>
+<body>
+
+	<div>
+		<div>Since the offset value is affected by the browser size,
+		<br>the offset value may change as the browser size changes.</div>
+	</div>
+	<button>Returns the x,y offset value of the yellow area</button>	
+
+</body>
+</html>

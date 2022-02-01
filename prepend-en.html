@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>jQuery   prepend() Event Method</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $("#btn1").click(function(){
+		$("p").prepend("<b>&#9749;  Tea Time </b>");
+	  });
+	  $("#btn2").click(function(){
+		$("ol").prepend("<li>&#9997; handwriting </li>");
+	  });
+	});
+	</script>
+</head>
+<body>
+	<p>first paragraph</p>
+	<p>second paragraph</p>
+	<ol>
+		<li>item 1</li>
+		<li>item 2</li>
+		<li>item 3</li>
+	</ol>
+	<button id="btn1">add text</button>
+	<button id="btn2">add list</button>
+</body>
+</html>

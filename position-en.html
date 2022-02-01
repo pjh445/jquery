@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>jQuery   position() Event Method</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+			const x = $("div>div").position();
+			alert(  " left: " + Math.round(x.left)+ "pixels, top: " + x.top  +"pixels");
+			});
+		});
+	</script>
+	<style>
+		body> div {background:silver; width:700px; height:300px; margin:auto; padding-top:100px; position:relative;}
+		div> div {background:orange; width:400px; height:200px; margin:auto; padding:20px;}
+		button {display:block; margin:20px auto;}
+	</style>
+</head>
+<body>
+
+	<div>	
+		<div>The position value is not affected by the browser size.<br>The position value does not change even if the browser size is changed.</div>
+	</div>
+	<button>Return x,y position values in the orange area</button>
+	
+
+</body>
+</html>

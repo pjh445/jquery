@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery   html() Event Method</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		$("p").text("html()method returns text. " + $("ul").text());
+	});
+	$("#btn2").click(function(){
+		$("p").html("<b>html() method returns an html tag.</b><br>" + $("ul").html());
+	});
+});
+</script>
+<style>
+		section {max-width:600px; margin:auto;}
+		ul {list-style:square;}
+		p {border:1px solid orange; background:pink; padding:20px;}		
+</style>
+</head>
+<body>
+	<section>
+		<h1>jQuery makes returning HTML content easier</h1>
+		<ul>
+			<li>text() returns text.</li>
+			<li>html() returns html tags including pictures, text, and media..</li>
+			<li><img src="images/spring.jpg" width="100" alt="rose"></li>
+		</ul>
+		<button id="btn1">Show Text</button>
+		<button id="btn2">Show HTML</button>
+		<p></p>
+	</section>
+</body>
+</html>
