@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>jQuery   prop() Event Method</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		let   count= 0;
+		$("input[type='checkbox']").click(function(){
+				count = $("input:checked[type='checkbox']").length;
+				if(count > 3){ 
+					$(this).prop("checked" , false);
+				alert("Up to 3 selectable.");
+			  }
+		});
+	});
+	</script>
+</head>
+<body>
+
+    <h2>Choose 3 hobbies.</h2>
+	<form>
+		<label><input type="checkbox">Mountaineering</label><br>  
+		<label><input type="checkbox">Fishing</label><br>  
+		<label><input type="checkbox">Watching Movies</label><br>  
+		<label><input type="checkbox">Shooting</label><br>  
+		<label><input type="checkbox">Travel</label><br>  
+		<label><input type="checkbox">Soccer</label><br> 
+		<input type="submit" value="SEND">  
+	</form> 
+
+</body> 
+</html>
