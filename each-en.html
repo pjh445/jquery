@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery   each() Event Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>	
+$(document).ready(function(){
+	$('#mySkill').click(function(){
+		$('#mySkill progress').each(function(i){  		
+			alert( "index " + i + "th: " + $(this).attr("value") + "\n");
+		});
+	});
+});
+</script>
+<style>
+* { margin:0; padding:0; }
+#mySkill {max-width:600px; border:1px solid red; background:gold; margin:20px auto; padding:20px;}
+#mySkill h1 {font-size:1.1rem; padding-bottom:20px;}
+#mySkill progress {margin:5px; width:100%; height:20px;}
+</style>
+</head>
+<body>
+	<section id="mySkill">
+		<h1>If you click on the yellow background area, the value of each bar is displayed in turn in the warning window.</h1>
+		<progress value="120" max="300"></progress>
+		<progress value="290" max="300"></progress>
+		<progress value="85" max="300"></progress>
+		<progress value="220" max="300"></progress>
+	</section>
+</body>
+</html>
