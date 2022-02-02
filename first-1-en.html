@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery   first() Event Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#rainbow img").click(function(){
+			$("#rainbow li").first().css({"background":"pink","border":"5px dotted red","font":"italic 1.2rem 'Cambria' "});
+		});
+	});
+	</script>
+	<style>
+	html,body {box-sizing:border-box;}
+	#layout {width:600pt; margin:20px auto; box-shadow:1px 1px 10px aqua; padding:30px;}
+	#layout h1 {font:1.2rem "arial"; padding-bottom:20px;}
+	#rainbow img {width:50%; border-radius:10pt;}
+	#rainbow ul {list-style:none; line-height:170%; padding-left:0;}
+	#rainbow li {padding-left:30px;}
+	</style>
+</head>
+<body>
+	<div id="layout">
+		<h1>When you click on the eye image, the text odd-numbered item lines become 
+      an aqua background color.</h1>
+		<section id="rainbow">
+			<h2>Rainbow ..... William Wordsworth</h2>
+			<img src="images/rainbow.jpg" alt="rainbow">
+			<ul>
+				<li>My heart leaps up when I behold</li>
+				<li>A rainbow in the sky</li>
+				<li>So was it when my life began,</li>
+				<li>So is it now I am a man,</li>
+				<li>So be it when I shall grow old,</li>
+				<li>Or let me die!</li>
+				<li>The child is father of the man</li>
+				<li>And I could wish my days to be</li>
+				<li>Bound each to each by notural piety.</li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>

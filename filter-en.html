@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery   filter() Event Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script>
+$(document).ready(function(){ 
+	//keyup() detects an event when a key is pressed and released.
+	$("#txt").on("keyup", function() { 
+		//Each time a character is entered, it is saved in the variable txt.
+		let txt = $(this).val(); 
+		//Filter fruit name text
+		$("#fruits section p").filter(function() { 
+			//toggle() toggles show/hide according to the filter result.   
+			//index() > -1 means the last 1 string.	
+           $(this).toggle( $(this).text().indexOf(txt) > -1 );
+		}); 
+	}); 
+}); 
+</script> 
+<style>
+#fruits {max-width:500px; margin:auto; border:5px solid #eee; padding:10px 20px;}
+</style>
+</head> 
+<body>
+	<div id="fruits">
+		<input id="txt" type="text" placeholder="Please write the name of the fruit."> 
+		<br> 
+		<section> 
+			<h1>fruit list</h1> 
+			<p>apple</p>
+			<p>strawberry</p>
+			<p>grape</p>
+			<p>orange</p>
+			<p>pineapple</p>
+		</section>
+	</div>
+</body>
+</html>
