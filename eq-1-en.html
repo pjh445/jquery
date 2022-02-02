@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery   eq() Event Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		const $img = $("#spring img");
+		let i = 4;
+		$("#spring button").click( function () {
+			if ( i > 0 ){
+				$img.eq( i ).css( "opacity" , 0 );
+				i--;
+			} else if ( i == 0 ){
+				$img.eq( i ).css( "opacity" , 0 );
+				$( this ).text("Image Visible");
+				i--;
+			} else {
+				$img.css("opacity",1);
+				$( this ).text("Hide Image");
+				i = 4;
+			}
+		});
+	});
+</script>
+<style>
+	#spring {width:750px; margin:auto; border:1px solid red; padding:10px 20px;}
+	#spring h1 {font:1.2rem/160% "arial";}
+	#spring button {padding:3px 10px; margin-bottom:30px;}
+	#spring div {display:flex; justify-content:space-between;}
+	#spring div img {width:18%;}
+</style>
+</head>
+<body>
+	<section id="spring">
+		<h1>Each time the [Hide Image] button is clicked, the images are hidden one by one. When all images are not visible, the button is changed to [Image Visible], and clicking the button makes all images visible.</h1>
+		<button>Hide Image</button>
+		<div>
+			<img src="images/spring0.jpg" alt="spring" id="spring0">
+			<img src="images/spring1.jpg" alt="spring" id="spring1">
+			<img src="images/spring2.jpg" alt="spring" id="spring2">
+			<img src="images/spring3.jpg" alt="spring" id="spring3">
+			<img src="images/spring4.jpg" alt="spring" id="spring4">
+		</div>
+	</section>
+</body>
+</html>
