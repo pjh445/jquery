@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery   next() Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+			$("#flowers div").next().addClass("bg_1");
+	 });
+	</script>
+	<style>
+	* {margin:0; box-sizing:border-box;}
+	html,body {font:15pt/180% "NanumSquare","NanumGothic","dotum";}
+	#flowers{max-width:600px; margin:auto; margin-top:10px; border:1px dashed gray; padding:10px; text-align:center;}
+	#flowers h2 {font-size:1.2rem; padding:20px;}
+	#flowers div {display:flex; justify-content:space-between;}
+	#flowers section{flex-basis:32%; border:10px solid #eee; border-radius:15px; font-size:1.5rem; font-weight:bold; color:red; overflow:hidden;}
+	#flowers img {display:block; width:100%; height:60%; margin:auto;}
+	#flowers h3 {font-size:1.1rem; color:tomato; padding-top:17px;}
+	#flowers p {padding:30px 0; margin-top:10px;}
+	.bg_1 {background:tomato;}
+	</style>
+</head>
+<body>
+	<section id="flowers">
+		<h2>The tomato background color  is applied to the parent &lt;div&gt; of the 3 images and the next sibling &lt;p&gt;</h2>
+		<div>
+			<section>
+				<img src="images/snow_flower-1.jpg" alt="snow flower">
+				<h3>snow flower 1</h3>
+			</section>
+			<section>
+				<img src="images/snow_flower-2.jpg" alt="snow flower">
+				<h3>snow flower 2</h3>
+			</section>
+			<section>
+				<img src="images/snow_flower-3.jpg" alt="snow flower">
+				<h3>snow flower 3</h3>
+			</section>
+		</div>		
+		<p>When you look at the snow flower, you will be amazed at the strong beauty of life.</p>
+	</section>
+</body>
+</html>
