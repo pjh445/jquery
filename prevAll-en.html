@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>jQuery   prev() Method</title>
+<title>jQuery   prevAll() Method</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function(){	
-	$("#small button:nth-child(2)").prev().css("transform","rotate(-10deg)");
+	$("#small button:last-child").prevAll().css("transform","rotate(-10deg)");
 });
 </script>
 <style>
@@ -25,16 +25,26 @@ $(document).ready(function(){
 		<h2>gallery</h2>
 		<div>
 			<div id="big">
-				<a href="#"><img src="images/01_big.jpg" alt="hotel 1"></a>
+				<a href="#"><img src="images/01_big.jpg" alt="hotel"></a>
 			</div>
 			<div id="small">
-				<button type="button" class="active"><img src="images/01_active.jpg" alt="hotel 1"></button>
-				<button type="button"><img src="images/02.jpg" alt="hotel 2"></button>
-				<button type="button"><img src="images/03.jpg" alt="hotel 3"></button>
-				<button type="button"><img src="images/04.jpg" alt="hotel 4"></button>
-				<button type="button"><img src="images/05.jpg" alt="hotel 5"></button>
+				<button type="button" class="active">
+					<img src="images/05.jpg" alt="hotel">
+				</button>
+				<button type="button">
+					<img src="images/02.jpg" alt="hotel">
+				</button>
+				<button type="button">
+					<img src="images/03.jpg" alt="hotel">
+				</button>
+				<button type="button">
+					<img src="images/04.jpg" alt="hotel">
+				</button>
+				<button type="button">
+					<img src="images/01_active.jpg" alt="hotel">
+				</button>
 			</div>
 		</div>
-	</section>	
+	</section>
 </body>
 </html>
