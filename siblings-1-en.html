@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>jQuery   siblings() Method</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$(".active").siblings().css("border-radius","100%");
+
+});
+</script>
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+#gallery {width:760px; margin:auto; border:1px solid red; margin-top:50px;}
+#gallery h2 {display:none;}
+#gallery >div {display:flex; }
+#gallery  button {border:none; background:transparent; overflow:hidden;}
+#gallery  img    {max-width:100%; display:block;}
+#small  {display:flex; flex-direction:column; justify-content:space-between;}
+</style>
+</head>
+<body>
+	<section id="gallery">
+		<h2>gallery</h2>
+		<div>
+			<div id="big">
+				<a href="#"><img src="images/01_big.jpg" alt="hotel"></a>
+			</div>
+			<div id="small">
+				<button type="button" class="active">
+					<img src="images/01_active.jpg" alt="hotel">
+				</button>
+				<button type="button">
+					<img src="images/02.jpg" alt="hotel">
+				</button>
+				<button type="button">
+					<img src="images/03.jpg" alt="hotel">
+				</button>
+				<button type="button">
+					<img src="images/04.jpg" alt="hotel">
+				</button>
+				<button type="button">
+					<img src="images/05.jpg" alt="hotel">
+				</button>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
