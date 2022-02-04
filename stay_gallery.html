@@ -7,8 +7,10 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function(){//시작부분
+	
 	//이미지 갤러리
-	$("#gallery  button").click(function(){		
+	$("#gallery  button").click(function(){	
+	
 	
 		//클릭한 곳 이미지 주소
 		const x1 = $(this).children().attr("src"); //예_ "images/02.jpg"
@@ -48,8 +50,8 @@ $(document).ready(function(){//시작부분
 #gallery {width:760px; margin:auto; border:1px solid red; margin-top:50px;}
 #gallery h2 {display:none;}
 #gallery >div {display:flex; }
-#gallery  button {border:none; background:transparent;}
-#gallery  img    {max-width:100%; display:block;}
+#gallery  button {border:none; background:transparent; cursor:pointer;}
+#gallery  img    {width:100%; display:block;}
 
 #small  {display:flex; flex-direction:column; justify-content:space-between;}
 </style>
@@ -74,3 +76,6 @@ $(document).ready(function(){//시작부분
 
 </body>
 </html>
+
+
+
