@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 가상 선택자</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("[href]:even").css({"font-style": "italic" ,"background" : "pink" ,  "padding" : "3.3pt"});	
+});
+</script>
+</head>
+<body>
+
+	<section>
+		<h2 class="gold yellow pink9">제이쿼리 정복을 향해 가즈아</h2>
+		<a href="http://samsung.com" target="_top">삼성</a>
+		<a href="http://apple.com" target="_blank">애플</a>
+		<a href="http://adobe.com" target="_blank">어도비</a>    
+	</section>
+	<p id="para_1">제이쿼리 정복에 날개를 달아봐</p>
+	<article>
+		<h3 class="pink gold green">제이쿼리는 웹문서를 위한 자바스크립트 라이브러리</h3>
+		<a href="http://samsung.com" target="_top">삼성</a>
+		<a href="http://apple.com" target="_blank">애플</a>
+		<a href="http://adobe.com" target="_blank">어도비</a>
+	</article>
+	<p class="blue gold deeppink_1">HTML에 제이쿼리 날개를 달자</p>
+		<footer>
+			<p id="para_2" class="gold">희망의 날개를 활짝 펼쳐 봐!</p>
+			<a href="http://samsung.com" target="_top">삼성</a>
+		<a href="http://apple.com" target="_blank">애플</a>
+		<a href="http://adobe.com" target="_blank">어도비</a>
+	</footer>
+  
+</body>
+</html>
