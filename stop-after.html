@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 stop() 메소드</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	const $img = $("#spring img");
+	$("#spring button").first().click(function(){
+		$img.animate({width:"500px"},3000);
+		$img.animate({left:"800px"},3000);
+	});
+	$("#spring button").last().click(function(){
+		$img.stop(true,true);
+	});
+});
+</script>
+<style>
+#spring {width:750px;}
+#spring button {padding:5px 10px; margin-bottom:30px;}
+#spring img {width:0; position:relative;}
+</style>
+</head>
+<body>
+	<section id="spring">
+		<h1>stop() 메소드의 매개변수</h1>
+		<button type="button">애니메이션 실행</button>
+		<button type="button">애니메이션 중지</button><br>
+		<img src="images/spring.jpg" alt="봄">
+	</section>
+</body>
+</html>
