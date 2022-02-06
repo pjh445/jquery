@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 append() 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(".fruits li").click(function(){
+		$(this).append("<b style='color:red;'>&hearts;</b>");
+	});	
+ });
+</script>
+<style>
+.fruits{max-width:600px; margin:auto; border:1px dashed gray; padding:10px;}
+.fruits h2 {font-size:1.2rem;}
+.fruits li{border:1px dotted lightgray; padding:5px;}
+.fruits:last-child {background:#eee; opacity:0.5;}
+.fruits:last-child  li::after {content:" \273F"; color:orange;}
+</style>
+</head>
+<body>
+	<section class="fruits">
+		<h2>append()메소드 (텍스트 항목을 클릭해 보세요)</h2>
+		<ul>
+			<li>딸기</li>
+			<li>사과</li>
+			<li>키위</li>
+			<li>바나나</li>
+			<li>포도</li>
+		</ul>
+	</section>
+	<section class="fruits">
+		<h2>::after 가상 선택자를 이용한 꽃모양 심볼</h2>
+		<ul>
+			<li>딸기</li>
+			<li>사과</li>
+			<li>키위</li>
+			<li>바나나</li>
+			<li>포도</li>
+		</ul>
+	</section>
+</body>
+</html>
