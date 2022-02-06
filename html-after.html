@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 html() 메소드</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		$("p").text("text()메소드는 텍스트를 반환합니다. " + $("ul").text());
+	});
+	$("#btn2").click(function(){
+		$("p").html("<b>html()메소드는 html 태그를 반환합니다.</b><br>" + $("ul").html());
+	});
+});
+</script>
+<style>
+		section {max-width:600px; margin:auto;}
+		ul {list-style:square;}
+		p {border:1px solid orange; background:pink; padding:20px;}		
+</style>
+</head>
+<body>
+	<section>
+		<h1>제이쿼리로 보다 쉽게 HTML 컨텐츠를 가져올 수 있습니다.</h1>
+		<ul>
+			<li>text()는 텍스트(문자)을 가져올 수 있습니다.</li>
+			<li>html()은 그림이나 글자나 미디어등을 포함한 html태그를 가져올 수 있습니다.</li>
+			<li><img src="images/spring.jpg" width="100" alt="장미"></li>
+		</ul>
+		<button id="btn1">Show Text</button>
+		<button id="btn2">Show HTML</button>
+		<p></p>
+	</section>
+</body>
+</html>
