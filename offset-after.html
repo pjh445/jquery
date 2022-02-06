@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>제이쿼리 offset()  메소드</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("div>div").offset(function(x,y){
+				alert( "노란영역의 오프셋 left 위치는 " + Math.round(y.left) + "픽셀, 오프셋 top 위치는 " + y.top +"픽셀입니다." );
+			});
+		});
+	});
+	</script>
+	<style>
+		body> div {background:silver; width:700px; height:300px; margin:auto; padding-top:100px; position:relative;}
+		div> div {background:gold; width:400px; height:200px; margin:auto; padding:20px;;}
+		button {display:block; margin:20px auto;}
+	</style>
+</head>
+<body>
+
+	<div>	
+		<div>오프셋 위치는 브라우저 크기에 영향을 받으므로,<br>브라우저 넓이나 높이값이 바뀐다면 오프셋 수치는 변동 될 수 있습니다.</div>
+	</div>
+	<button>노란색 영역의 오프셋  x,y 좌표 알아내기</button>	
+
+</body>
+</html>
