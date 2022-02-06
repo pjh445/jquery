@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>제이쿼리 position() 메소드</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+			const x = $("div>div").position();
+			alert(  " left: " + Math.round(x.left)+ "픽셀, top: " + x.top  +"픽셀");
+			});
+		});
+	</script>
+	<style>
+		body> div {background:silver; width:700px; height:300px; margin:auto; padding-top:100px; position:relative;}
+		div> div {background:orange; width:400px; height:200px; margin:auto; padding:20px;}
+		button {display:block; margin:20px auto;}
+	</style>
+</head>
+<body>
+
+	<div>	
+		<div>포지션 위치는 브라우저 크기에 영향을 받지 않으므로,<br>브라우저 넓이나 높이값이 바뀐다 하더라도 포지션 수치는 변하지 않습니다.</div>
+	</div>
+	<button>오렌지색 영역의 x,y 포지션 좌표 알아내기</button>
+	
+
+</body>
+</html>
