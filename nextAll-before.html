@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 nextAll() 메소드</title>
+	<style>
+	* {margin:0; box-sizing:border-box;}
+	html,body {font:15pt/180% "NanumSquare","NanumGothic","dotum";}
+	#flowers{max-width:700px; margin:auto; margin-top:10px; border:1px dashed gray; padding:10px; text-align:center;}
+	#flowers h2 {font-size:1.15rem; padding:20px;}
+	#flowers div {display:flex; justify-content:space-between;}
+	#flowers section{flex-basis:24%; border:10px solid pink; border-radius:15px;   font-weight:bold; color:red; overflow:hidden;}
+	#flowers img {display:block; width:100%; height:60%; margin:auto;}
+	#flowers h3 {font-size:1rem; color:tomato; padding-top:17px;}
+	#flowers p {padding:10px; margin-top:10px;}
+	.bg_1 {background:oldLace;}
+	.bg_2 {background:yellowgreen;}
+	#flowers section.border_1 {border:10px dotted red;}
+	</style>
+</head>
+<body>
+	<section id="flowers">
+		<h2>[겨울꽃 1] 섹션 다음에 오는 모든 형제 요소에 class 스타일 디자인 2가지 (연두색 배경 + 빨간색 점선테두리)가 적용됩니다.</h2>
+		<div>
+			<section>
+				<img src="images/snow_flower-1.jpg" alt="겨울꽃">
+				<h3>겨울꽃 1</h3>
+			</section>
+			<section>
+				<img src="images/snow_flower-2.jpg" alt="겨울꽃">
+				<h3>겨울꽃 2</h3>
+			</section>
+			<section>
+				<img src="images/snow_flower-3.jpg" alt="겨울꽃">
+				<h3>겨울꽃 3</h3>
+			</section>
+			<section>
+				<img src="images/snow_flower-4.jpg" alt="겨울꽃">
+				<h3>겨울꽃 4</h3>
+			</section>
+		</div>		
+		<p class="bg_1">겨울 꽃을 보면 생명의 강인한 아름다움에 탄성하게 됩니다.</p>
+	</section>
+</body>
+</html>
