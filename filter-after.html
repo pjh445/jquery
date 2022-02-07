@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 filter() 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script>
+$(document).ready(function(){ 
+	//keyup()은 키를 눌렀다가 떼는 순간 이벤트 감지.
+	$("#txt").on("keyup", function() { 
+		//한 글자씩 입력할 때마다 변수 txt에 저장됨.
+		let txt = $(this).val(); 
+		//과일 목록 글자를 필터링함
+		$("#fruits section p").filter(function() { 
+			//toggle()은 필터 결과에 따라 show/hide를 전환함.    
+			//index() > -1은 마지막 문자열 1개를 의미함.	
+           $(this).toggle( $(this).text().indexOf(txt) > -1 );
+		}); 
+	}); 
+}); 
+</script> 
+<style>
+#fruits {max-width:500px; margin:auto; border:5px solid #eee; padding:10px 20px;}
+</style>
+</head> 
+<body>
+	<div id="fruits">
+		<input id="txt" type="text" placeholder="과일이름을 기재하세요."> 
+		<br> 
+		<section> 
+		<h1>과일 목록</h1> 
+			<p>사과</p> 
+			<p>딸기</p> 
+			<p>포도</p> 
+			<p>오렌지</p> 
+			<p>파인애플</p> 
+		</section> 
+	</div>
+</body> 
+</html>
