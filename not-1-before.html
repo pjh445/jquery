@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 not() 메소드</title>
+<style>
+	* {margin:0; box-sizing:border-box;}
+	html,body {font:15pt/180% "NanumSquare","NanumGothic","dotum";}
+	#flowers{max-width:600px; margin:auto; margin-top:10px; border:1px dashed gray; padding:10px; text-align:center;}
+	#flowers h2 {font-size:1.15rem; padding:20px; padding-bottom:40px;}
+	#flowers div {display:flex; flex-direction:column;}
+	#flowers section{width:90%; border:10px solid pink; border-radius:15px; font-weight:bold; color:red; overflow:hidden; margin:auto; margin-bottom:20px;}
+	#flowers img {display:block; width:100%; margin:auto;}
+	#flowers h3 {font-size:1rem; color:tomato; padding-top:17px;}
+	#flowers p {padding:10px; margin-top:10px;}
+	.bg_1 {background:oldLace;}
+	.bg_2 {background:#edffad;}
+	#flowers section.border_1 {border:10px dotted #9db44d;}
+	#flowers section.border_2 {border:10px dashed tomato; border-radius:100%;}
+</style>
+</head>
+<body>
+	<section id="flowers">
+		<h2>"sec3" 클래스가 없는 섹션에 "border_2"와 "bg_2" 클래스를 추가합니다.</h2>
+		<div>
+			<section>
+				<img src="images/snow_flower-1.jpg" alt="겨울꽃">
+				<h3>겨울꽃 1</h3>
+			</section>
+			<section>
+				<img src="images/snow_flower-2.jpg" alt="겨울꽃">
+				<h3>겨울꽃 2</h3>
+			</section>
+			<section class="sec3">
+				<img src="images/snow_flower-3.jpg" alt="겨울꽃">
+				<h3>겨울꽃 3</h3>
+			</section>
+			<section>
+				<img src="images/snow_flower-4.jpg" alt="겨울꽃">
+				<h3>겨울꽃 4</h3>
+			</section>
+		</div>
+	</section>
+</body>
+</html>
