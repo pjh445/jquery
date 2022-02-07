@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 parentsUntil() 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+			$('[alt="봄풍경1"]').parentsUntil("body").css("border","5px solid green");
+	 });
+	</script>
+	<style>
+	* {margin:0; box-sizing:border-box;}
+	html,body {font:15pt/180% "NanumSquare","NanumGothic","dotum";}
+	#flowers{max-width:800px; margin:auto; margin-top:10px; border:1px dashed gray; padding:10px; text-align:center; display:flex; flex-direction:column;}
+	#flowers section{width:85%; border:2px solid pink; border-radius:20px; font-weight:bold; overflow:hidden; margin:auto; margin-bottom:20px;  display:flex; align-items:center;}
+	#flowers section img {width:45%; display:block; }
+	#flowers section h3  {width:55%; font-size:1.2rem; color:#d10024;}
+	#flowers p {padding:10px; margin-top:10px;}
+	</style>
+</head>
+<body>
+	<div id="flowers">
+			<section>
+				<img src="images/spring4.jpg" alt="봄풍경1">
+				<h3>봄풍경 1</h3>
+			</section>
+			<section>
+				<img src="images/spring2.jpg" alt="봄풍경2">
+				<h3>봄풍경 2</h3>
+			</section>
+			<section>
+				<img src="images/spring0.jpg" alt="봄풍경3">
+				<h3>봄풍경 3</h3>
+			</section>
+	</div>
+</body>
+</html>
