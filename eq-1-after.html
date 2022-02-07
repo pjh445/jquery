@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 eq() 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		const $img = $("#spring img");
+		let i = 4;
+		$("#spring button").click( function () {
+			if ( i > 0 ){
+				$img.eq( i ).css( "opacity" , 0 );
+				i--;
+			} else if ( i == 0 ){
+				$img.eq( i ).css( "opacity" , 0 );
+				$( this ).text("이미지 보이기");
+				i--;
+			} else {
+				$img.css("opacity",1);
+				$( this ).text(" 이미지 감추기" );
+				i = 4;
+			}
+		});
+	});
+</script>
+<style>
+	#spring {width:750px; margin:auto; border:1px solid red; padding:10px 20px;}
+	#spring h1 {font:1.2rem/160% "나눔스퀘어","나눔고딕";}
+	#spring button {padding:3px 10px; margin-bottom:30px;}
+	#spring div {display:flex; justify-content:space-between;}
+	#spring div img {width:18%;}
+</style>
+</head>
+<body>
+	<section id="spring">
+		<h1>[이미지 감추기]버튼을 클릭할 때마다 이미지가 하나씩 감춰지며,<br>
+                  이미지가 모두 감춰졌을때 버튼은 [이미지 보이기]로 변경되고, 
+                  버튼을 클릭하면 이미지가 모두 보이게 됩니다.</h1>
+		<button>이미지 감추기</button>
+		<div>
+			<img src="images/spring0.jpg" alt="봄" id="spring0">
+			<img src="images/spring1.jpg" alt="봄" id="spring1">
+			<img src="images/spring2.jpg" alt="봄" id="spring2">
+			<img src="images/spring3.jpg" alt="봄" id="spring3">
+			<img src="images/spring4.jpg" alt="봄" id="spring4">
+		</div>
+	</section>
+</body>
+</html>
