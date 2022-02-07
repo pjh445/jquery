@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>제이쿼리 is() 메소드</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $("p").click(function(){
+		if ($("img").parents().is("div")) {
+		   $("img").css({"border-radius":"100px",'transform':'rotate(-10deg)'});
+		}
+		if ( $(".sec1").prev().is("div")  ){
+			$(".sec1").css("border","5px dashed tomato");
+		}
+	  });
+	});
+	</script>
+	<style>
+	#layout {max-width:500px; margin:auto; margin-top:20px; box-shadow:0 0 10px red; padding:20px; border-radius:10px;}
+	#layout h1{font:1.3rem "나눔스퀘어","나눔고딕";}
+	#layout img {width:100%;}
+	#layout .sec1 {margin:10px;}
+	</style>
+</head>
+<body>
+	<section id="layout">
+		<h1>이미지를 클릭하면 디자인이 표현됩니다.</h1>
+		<div>
+		  <p><img src="images/spring2.jpg" alt="봄"></p>
+		</div>
+		<section class="sec1">
+		   <h2>테스트<b>중입니다.</b></h2>
+		</section>
+		<section class="sec1">
+		   <h2>테스트<b>중입니다.</b></h2>
+		</section>
+	</section>
+</body>
+</html>
