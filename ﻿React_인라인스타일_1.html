@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>﻿﻿React 인라인스타일</title>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>	
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>	
+    <header id="root"></header>	
+	<!------------------------>
+	<script type="text/babel">
+	const Header = () => {
+		return (
+			<>
+				<h1 style={{color:'red', backgroundColor:'gold'}}>인라인 스타일</h1>
+				<p>스타일이 요소에 개별적으로 빠르게 스타일을 추가할 수 있습니다.</p>
+			</>
+		)
+	}
+
+	ReactDOM.render(<Header />,document.getElementById('root'));
+	</script>
+  </body>
+</html>
