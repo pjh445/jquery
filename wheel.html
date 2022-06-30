@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>한장면씩 부드럽게 스크롤하기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	$(document).scrollTop(0);
+	const secTop0 = $(".sec").eq(0).offset().top;
+	const secTop1 = $(".sec").eq(1).offset().top;
+	const secTop2 = $(".sec").eq(2).offset().top;
+	const secTop3 = $(".sec").eq(3).offset().top;
+	const secTop4 = $(".sec").eq(4).offset().top;
+	const secTop5 = $(".sec").eq(5).offset().top;
+	let scrollTop;//처음 스크롤바 top	
+			
+			let lastScrollTop = 0;//
+			$(window).scroll(function(event){
+				scrollTop= $(this).scrollTop();//스크롤내렸을때 top
+				if (scrollTop > lastScrollTop){
+						//console.log("아래로 내림");			   
+					   if(scrollTop<secTop1){							
+							move(1);
+					   }
+					   if(scrollTop>secTop1 && scrollTop<secTop2){
+							move(2);							
+					   }
+					   if(scrollTop>secTop2 && scrollTop<secTop3){
+							move(3);							
+						}
+					   if(scrollTop>secTop3 && scrollTop<secTop4){
+							move(4);
+					   }
+					   if(scrollTop>secTop4 && scrollTop<secTop5){
+							move(5);
+					   }			   
+				   
+				} 
+				if (scrollTop < lastScrollTop){	
+						//console.log("위로 올림");				   
+						if(scrollTop<=secTop5 && scrollTop>secTop4){							
+							move(4);
+						}
+						if(scrollTop<=secTop4 && scrollTop>secTop3){							
+							move(3);
+						}
+						if(scrollTop<=secTop3 && scrollTop>secTop2){							
+							move(2);
+						}
+						if(scrollTop<=secTop2 && scrollTop>secTop1){							
+							move(1);
+						}
+						if(scrollTop<=secTop1 ){							
+							move(0);
+						}
+				}
+				//스크롤내렸을때의 top을 마지막스크롤 top에 값 넘겨줌
+				lastScrollTop = scrollTop;				
+			});
+			
+			let pos;
+			function move(i){
+				switch(i){
+					case 0: pos = secTop0;
+							break;
+					case 1: pos = secTop1;
+							break;
+					case 2: pos = secTop2;
+							break;
+					case 3: pos = secTop3;
+							break;
+					case 4: pos = secTop4;
+							break;
+					case 5: pos = secTop5;						
+				}
+				$("html,body").stop().animate({scrollTop:pos},50);
+			}			
+
+	
+});//////end
+</script>
+<style>
+* {margin:0; box-sizing:border-box;}
+::-webkit-scrollbar {width:1px;}
+html,body {scroll-hehavior:smooth;}
+.sec {height:100vh;}
+.sec:nth-child(3n+1) {background:gold;}
+.sec:nth-child(3n+2) {background:skyblue;}
+.sec:nth-child(3n) {background:pink;}
+</style>
+</head>
+<body>
+
+	<section class="sec">
+		<h1>섹션영역0</h1>
+	</section>
+	<section class="sec">
+		<h1>섹션영역1</h1>
+	</section>
+	<section class="sec">
+		<h1>섹션영역2</h1>
+	</section>
+	<section class="sec">
+		<h1>섹션영역3</h1>
+	</section>
+	<section class="sec">
+		<h1>섹션영역4</h1>
+	</section>
+	<section class="sec">
+		<h1>섹션영역5</h1>
+	</section>
+	
+</div>
+</body>
